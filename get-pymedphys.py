@@ -1,4 +1,3 @@
-import sys
-
-print("hello world!")
-print(sys.argv)
+def main(argv):
+    print("hello world!")
+    print(argv)
