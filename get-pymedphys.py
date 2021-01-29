@@ -1,10 +1,15 @@
-import sys
+import typer
+import click_spinner
+import time
 
+app = typer.Typer()
+
+
+@app.command()
 def main():
-    print(sys.executable)
-    print("hello world!")
-    print(sys.argv)
+    with click_spinner.spinner():
+        for thing in range(10):
+            time.sleep(1)
 
-    
 if __name__ == "__main__":
-    main()
+    app()
